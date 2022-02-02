@@ -170,6 +170,12 @@ export default function Home() {
       url: "https://www.iconshock.com/",
       title: "iconshock",
       desc: "The biggest icon pack: 2 million professional icons library"
+    },
+    {
+      type: "font",
+      url: "https://www.fontfabric.com/",
+      title: "Font Fabric",
+      desc: "A digital type foundry crafting retail fonts and custom typography for various brands. Sharing a passion for premium typefaces, calligraphy and lettering."
     }
   ]
 
@@ -193,6 +199,7 @@ export default function Home() {
         <div data-title="CSS">
           <Head>
             <title>Resourcez</title>
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           </Head>
           <div className=" site css mt-5  grid grid-cols-4  justify-center ">
