@@ -86,6 +86,12 @@ export default function Home() {
       desc: "A simple visual cheatsheet for CSS Grid Layout"
     },
     {
+      type: "fonts",
+      url: "https://fontsinuse.com/",
+      title: "fonts in use",
+      desc: "A searchable archive of typographic design, indexed by typeface, format, and topic."
+    },
+    {
       type: "css",
       url: "https://cssgridgarden.com/",
       title: "CSS grid garden",
@@ -110,6 +116,12 @@ export default function Home() {
       desc: "Popular layouts and patterns made with CSS"
     },
     {
+      type: "fonts",
+      url: "https://www.fontsquirrel.com/",
+      title: "font squirrel",
+      desc: "Font Squirrel scours the internet for high quality, legitimately free fonts . Download thousands of completely legal, high quality, free fonts."
+    },
+    {
       type: "css",
       url: "https://flexbox.malven.co/",
       title: "flexbox malven",
@@ -128,6 +140,12 @@ export default function Home() {
       url: "https://meshgradient.in/",
       title: "mesh gradients",
       desc: "Generate beautiful mesh gradients"
+    },
+    {
+      type: "fonts",
+      url: "https://www.1001fonts.com/free-for-commercial-use-fonts.html",
+      title: "1001 Fonts",
+      desc: "Download fonts that are free for commercial use. No further licensing is required to use these fonts for desktop use in a business environment."
     },
     {
       type: "color",
@@ -172,11 +190,12 @@ export default function Home() {
       desc: "The biggest icon pack: 2 million professional icons library"
     },
     {
-      type: "font",
+      type: "fonts",
       url: "https://www.fontfabric.com/",
       title: "Font Fabric",
       desc: "A digital type foundry crafting retail fonts and custom typography for various brands. Sharing a passion for premium typefaces, calligraphy and lettering."
-    }
+    },
+    
   ]
 
 
@@ -192,6 +211,7 @@ export default function Home() {
         <button className='bg-tab text-white shadow px-5 py-1 rounded-full' onClick={() => onClickTab('css')}>CSS</button>
         <button className='bg-tab text-white shadow px-5 py-1 rounded-full' onClick={() => onClickTab('color')}>Colors</button>
         <button className='bg-tab text-white shadow px-5 py-1 rounded-full' onClick={() => onClickTab('icons')}>Icons</button>
+        <button className='bg-tab text-white shadow px-5 py-1 rounded-full' onClick={() => onClickTab('fonts')}>Fonts</button>
       </div>
 
 
@@ -199,7 +219,7 @@ export default function Home() {
         <div data-title="CSS">
           <Head>
             <title>Resourcez</title>
-            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+            <link rel="shortcut icon" href="favicon.ico"  />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           </Head>
           <div className=" site css mt-5  grid grid-cols-4  justify-center ">
