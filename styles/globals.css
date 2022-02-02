@@ -1,3 +1,11 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
 html,
 body {
   padding: 0;
@@ -14,3 +22,66 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: whitesmoke;
+}
+
+.site h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+}
+.site p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.site > div {
+  background: linear-gradient(135deg, #84A3E9 0%, #DFFEE6 100%);
+  min-width: 201px;
+}
+.site > div a div {
+  transition: all 0.3s ease;
+}
+.site > div a:hover > div {
+  background-color: #e0e1e6;
+}
+
+.site.grid {
+  --min: 20ch;
+  --gap: 1rem;
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  justify-items: center;
+}
+.site.grid div {
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.tabs.style__horizontal .tabs__nav {
+  justify-content: center;
+}
+.tabs.style__horizontal .tabs__nav .tabs__nav_link {
+  border: 0;
+  border-radius: 18px;
+  text-align: center;
+  padding: 5px 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-size: 18px;
+  box-shadow: 0px 0.8963982463px 2.6891946793px 0px rgba(0, 0, 0, 0.1);
+}
+.tabs.style__horizontal .tabs__nav .tabs__nav_link.is__active {
+  background: #bac5df;
+  color: #ffffff;
+}
+.tabs.style__horizontal .tabs__content.is__active {
+  border: 0;
+}/*# sourceMappingURL=style.css.map */

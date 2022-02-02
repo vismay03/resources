@@ -1,69 +1,213 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Card from './component/card'
+import Header from './component/header'
+import { useState } from 'react'
+
 
 export default function Home() {
+
+  const [tab, onClickTab] = useState('*');
+
+
+  var resourcez = [
+
+    {
+      type: "css",
+      url: "https://moderncss.dev/",
+      title: "Modern CSS",
+      desc: "Modern CSS Solutions for Old CSS Problems"
+    },
+    {
+      type: "icons",
+      url: "https://heroicons.com/",
+      title: "Hero Icons",
+      desc: "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS."
+    },
+    {
+      type: "css",
+      url: "https://smolcss.dev/",
+      title: "Smol CSS",
+      desc: "Minimal snippets for modern CSS layouts and components"
+    },
+    {
+      type: "css",
+      url: "https://stylestage.dev/",
+      title: "Style Stage",
+      desc: "A modern CSS showcase styled by community contributions"
+    },
+    {
+      type: "css",
+      url: "https://animate.style/",
+      title: "Animate.css",
+      desc: "A cross-browser library of CSS animations."
+    },
+    {
+      type: "css",
+      url: "https://webcode.tools/generators/css",
+      title: "CSS Generator",
+      desc: "Almost all css generators you need"
+    },
+    {
+      type: "css",
+      url: "https://keyframes.app/",
+      title: "Keyframes",
+      desc: "simple visual tools to help you generate CSS for your projects."
+    },
+    {
+      type: "color",
+      url: "http://khroma.co/",
+      title: "khroma",
+      desc: "The AI color tool for designers"
+    },
+    {
+      type: "icons",
+      url: "https://simpleicons.org/",
+      title: "Simple Icons",
+      desc: "Free SVG icons for popular brands"
+    },
+    {
+      type: "color",
+      url: "https://uigradients.com/",
+      title: "UI gradients",
+      desc: "Beautiful colored gradients"
+    },
+    {
+      type: "css",
+      url: "https://cssreference.io/",
+      title: "CSS Reference",
+      desc: "A free visual guide to CSS."
+    },
+    {
+      type: "css",
+      url: "https://grid.malven.co/",
+      title: "Grid Malven",
+      desc: "A simple visual cheatsheet for CSS Grid Layout"
+    },
+    {
+      type: "css",
+      url: "https://cssgridgarden.com/",
+      title: "CSS grid garden",
+      desc: "A game for learning CSS grid"
+    },
+    {
+      type: "color",
+      url: "https://mycolor.space/",
+      title: "Color Space",
+      desc: "Color Palettes Generator and Color Gradient Tool"
+    },
+    {
+      type: "css",
+      url: "https://flexboxfroggy.com/",
+      title: "Flexbox Froggy",
+      desc: "A game for learning CSS flexbox"
+    },
+    {
+      type: "css",
+      url: "https://csslayout.io/",
+      title: "CSS Layout",
+      desc: "Popular layouts and patterns made with CSS"
+    },
+    {
+      type: "css",
+      url: "https://flexbox.malven.co/",
+      title: "flexbox malven",
+      desc: "A simple visual cheatsheet for flexbox"
+    },
+   
+    {
+      type: "color",
+      url: "https://www.materialpalette.com/",
+      title: " material palette",
+      desc: "Material Design Color Palette Generator"
+    },
+   
+    {
+      type: "color",
+      url: "https://meshgradient.in/",
+      title: "mesh gradients",
+      desc: "Generate beautiful mesh gradients"
+    },
+    {
+      type: "color",
+      url: "https://cssgradient.io/gradient-backgrounds/",
+      title: "gradient backgrounds",
+      desc: "As a curated list of the best gradient websites across the internet, Gradient Backgrounds allows you to explore, try and choose from hundreds of beautiful blended color palettes."
+    },
+    {
+      type: "color",
+      url: "https://gradients.party/",
+      title: "gradients party",
+      desc: "collection of gradients for your buttons."
+    },
+    {
+      type: "color",
+      url: "https://slick-gradient.vercel.app/",
+      title: "slick gradient",
+      desc: "A curated collection of beautiful CSS gradients using the full range of CSS colours. Easily copy and paste CSS"
+    },
+    {
+      type: "icons",
+      url: "https://ikonate.com/",
+      title: "Ikonate",
+      desc: "fully customisable & accessible vector iconsS"
+    },
+    {
+      type: "icons",
+      url: "https://icons.modulz.app/",
+      title: "Radix Icons",
+      desc: "A crisp set of 15×15 icons designed by the Modulz team."
+    },
+    {
+      type: "icons",
+      url: "https://iconscout.com/unicons/explore/line",
+      title: "Unicons",
+      desc: "Unicons icon library"
+    },
+    {
+      type: "icons",
+      url: "https://www.iconshock.com/",
+      title: "iconshock",
+      desc: "The biggest icon pack: 2 million professional icons library"
+    }
+  ]
+
+
+
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className='container w-7/12 m-auto pb-36'>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Header />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <div className='flex gap-2 justify-center mb-12'>
+        <button className='bg-tab text-white shadow  px-5 py-1 rounded-full'  onClick={() => onClickTab('*')}>All</button>
+        <button className='bg-tab text-white shadow px-5 py-1 rounded-full' onClick={() => onClickTab('css')}>CSS</button>
+        <button className='bg-tab text-white shadow px-5 py-1 rounded-full' onClick={() => onClickTab('color')}>Colors</button>
+        <button className='bg-tab text-white shadow px-5 py-1 rounded-full' onClick={() => onClickTab('icons')}>Icons</button>
+      </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div id="tabs-h" className="tabs">
+        <div data-title="CSS">
+          <Head>
+            <title>Resourcez</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          </Head>
+          <div className=" site css mt-5  grid grid-cols-4  justify-center ">
+            {tab !== "*" ?
+              resourcez.filter(d => d.type === tab && "*" !== tab).map((fs, i) => (
+                <Card key={i}  title={fs.title} desc={fs.desc} url={fs.url} />
+              ))
+              :
+              resourcez.map((fs, i) => (
+                <Card key={i}  title={fs.title} desc={fs.desc} url={fs.url} />
+              ))
+            }
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      </div>
     </div>
   )
 }
